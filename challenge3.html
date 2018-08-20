@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 3</title>
+    <script>
+    function checkForm(){
+    	// Write a function that ensures at least one but ONLY one radio button is selected.  Make sure the form action is not performed if either field is blank.
+      var bs = document.getElementById("opt-straw").checked
+      var bb = document.getElementById("opt-blue").checked
+      if (!bs && !bb ) {alert("Please select at least one option."); return false}
+        // I made it impossible to choose both options by adjusting the HTML code. So this following line is actually not neccessary.
+        // else if (bs ="true" && bs = "true") {alert("Please select only one option."); return false}
+		} 
+    </script>
+</head>
+<body>
+  <h1> Challenge 3</h1>
+	 <form action="challenge4.html" 
+        onsubmit= "return checkForm()">
+      <fieldset>
+        <legend>Radio buttons and Check Boxes</legend>
+        <div>
+          What's your favorite berry?: 
+          <label>
+            <input type="radio" value = "s" name = "favorite" id="opt-straw"> Strawberries
+          </label>
+          <label>
+            <input type="radio" value = "b" name = "favorite" id="opt-blue"> Blueberries
+        </label>
+      </div>
+  </fieldset>
+  <input type="submit" value="Pick your fruit!">
+</form>
+</body>
+</html>

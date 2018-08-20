@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 5</title>
+	<style>
+	body{
+		margin: 2%;
+		border: 1px solid black;
+		background-color: #b3b3b3;
+	}
+	#image{
+    	line-height:325px;
+		width: 388px;
+    	height: 325px;
+		border:5px solid black;
+		margin:0 auto;
+    	background-repeat: no-repeat;
+    	color:#FFFFFF;
+    	text-align: center;
+    	background-color: #8e68ff;
+    	background-size: 100%;
+    	margin-bottom:25px;
+    	font-size:150%;
+
+	}
+	.preview{
+		width:10%;
+		margin-left:17%;
+    	border: 10px solid black;
+	}
+	img{
+		width:95%;
+	}
+	h1{
+		text-align: center;
+	}
+	</style>
+
+	<script>
+	function upDate(image) {
+	document.getElementById("image").style.backgroundImage = "url("+image.src+")";
+	document.getElementById("image").innerHTML = image.alt
+
+	} 
+	function undo() {
+	document.getElementById("image").style.backgroundImage = "";
+	document.getElementById("image").innerHTML = "Hover or tab over/into an image below."
+
+	}
+	</script>
+</head>
+
+<body>
+	<h1>Challenge 5</h1>
+		<div id = "image">
+			Hover or tab over/into an image below.
+		</div>
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" 
+			alt = "Monet 1" 
+			src = "http://www.galleryintell.com/wp-content/uploads/2013/04/Monet-Parliament-Soleil_Couchant-galleryIntell1.jpg"
+			onfocus = "upDate(this)"
+			onmouseover = "upDate(this)"
+			onblur = "undo()"
+			onmouseleave = "undo()" >
+
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->	
+		<img class = "preview" 
+			alt = "Monet 2" 
+			src = "https://www.allartclassic.com/img/Claude_Oscar_Monet_MOC008.jpg"
+			onmouseover = "upDate(this)"
+			onfocus = "upDate(this)"
+			onblur = "undo()"
+			onmouseleave = "undo()" >
+	
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "1" 
+			src = "https://assets.londonist.com/uploads/2018/04/i875/monet_x9412-a5.jpg" 
+			alt = "Monet 3"
+			onmouseover = "upDate(this)"
+			onfocus = "upDate(this)"
+			onblur = "undo()"
+			onmouseleave = "undo()" >
+
+		<img class = "preview" 
+			alt = "Monet 4" 
+			src = "https://d1lfxha3ugu3d4.cloudfront.net/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2005_Monets_London_68.48.1_335.jpg"
+			onmouseover = "upDate(this)"
+			onfocus = "upDate(this)"
+			onblur = "undo()"
+			onmouseleave = "undo()" >
+
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->	
+		<img class = "preview" 
+			alt = "Monet 5" 
+			src = "https://media-cdn.tripadvisor.com/media/photo-s/07/5c/a1/9b/caption.jpg"
+			onmouseover = "upDate(this)"
+			onfocus = "upDate(this)"
+			onblur = "undo()"
+			onmouseleave = "undo()" >
+	
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "1" 
+			src = "http://www.galleryintell.com/wp-content/uploads/2013/04/Monet-Parliament-Sun_breaking_through_the_fog-galleryIntell.jpg" 
+			alt = "Monet 6"
+			onmouseover = "upDate(this)"
+			onfocus = "upDate(this)"
+			onblur = "undo()"
+			onmouseleave = "undo()" >
+</body>
+</html>
+	

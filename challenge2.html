@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge Two</title>
+    
+</head>
+<body>
+    <h1>Challenge Two</h1>
+    <form action="challenge3.html">
+      <fieldset>
+        <legend>Billing Information</legend>
+        <div>
+          <label for ="billing">Billing Address:</label><br>
+          <textarea name="billingAdd" id="billing"></textarea>
+        </div>
+
+        <div>
+          <label for ="home">Home Address:</label><br>
+          <input type="checkbox" name="useBilling" onclick = "setHomeAddress()" id="useBilling"> Same as above <br>
+        <textarea name="homeAdd" id="home"></textarea>
+        </div>
+        <input type = "submit" value = "Go To Challenge 3">
+      </fieldset>
+      </form>
+<!-- // YOUR  JavaScript/jQuery CODE HERE -->
+    <script>
+     function setHomeAddress(){
+      var billing = document.getElementById("billing").value
+      // var home = document.getElementById("home").value
+      var checkedOrNot = document.getElementById("useBilling").checked
+      if (checkedOrNot) {
+        console.log(checkedOrNot);
+        // home = billing doesn't work
+        document.getElementById("home").value= billing;
+        console.log("billing: "+billing);
+        document.getElementById("home").disabled = "true";
+      }
+      else {
+          console.log(checkedOrNot);
+          document.getElementById("home").disabled = "false";
+          document.getElementById("home").removeAttribute("disabled") ;
+          document.getElementById("home").value = ""
+        }
+
+     }
+    </script>
+</body>
+</html>
